@@ -1,0 +1,483 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Workshops | Aaruush'17</title>
+<link rel="shortcut icon" type="image/x-icon" href="../img/aaruush_title_logo.ico" />
+<link rel = "stylesheet" type = "text/css" href = "css/montserrat.css">
+<style class="cp-pen-styles">
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #15181A;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+}
+
+.skw-pages {
+  overflow: hidden;
+  position: relative;
+  height: 100vh;
+}
+
+.skw-page {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.skw-page__half {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100vh;
+  -webkit-transition: -webkit-transform 1s;
+  transition: transform 1s;
+}
+
+.skw-page__half--left {
+  left: 0;
+  -webkit-transform: translate3d(0vh, 100%, 0);
+  transform: translate3d(0vh, 100%, 0);
+}
+
+.skw-page__half--right {
+  left: 50%;
+  -webkit-transform: translate3d(0vh, -100%, 0);
+  transform: translate3d(0vh, -100%, 0);
+}
+
+.skw-page.active .skw-page__half {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.skw-page__skewed {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 140%;
+  height: 100%;
+
+  background: #000;
+}
+
+.skw-page__half--left .skw-page__skewed { left: -40%; }
+
+.skw-page__half--right .skw-page__skewed { right: -40%; }
+
+.skw-page__content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-flow: column wrap;
+  -ms-flex-flow: column wrap;
+  flex-flow: column wrap;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0 30%;
+  color: #fff;
+
+  -webkit-transition: -webkit-transform 1s, opacity 1s;
+  transition: transform 1s, opacity 1s;
+  background-size: cover;
+}
+
+.skw-page__half--left .skw-page__content {
+  padding-left: 30%;
+  padding-right: 5%;
+  -webkit-transform-origin: 100% 0;
+  -ms-transform-origin: 100% 0;
+  transform-origin: 100% 0;
+}
+
+.skw-page__half--right .skw-page__content {
+  padding-left: 5%;
+  padding-right: 30%;
+  -webkit-transform-origin: 0 100%;
+  -ms-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+}
+
+.skw-page.inactive .skw-page__content {
+  opacity: 0.5;
+
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+z-index: 30;
+width: 100%;
+font-family: montserrat;
+
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #2c78a2;
+}
+
+.skw-page__heading {
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  font-size: 40px;
+  text-align: center;
+  float: right
+}
+
+.skw-page__description {
+  letter-spacing: 1px;
+  text-align: left;
+   line-height: 150%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.skw-page__link { color: #FFA0A0; }
+
+.skw-page-1 .skw-page__half--left .skw-page__content { background-image: url("img/1.png"); width: 700px; margin-left:260px; }
+
+.skw-page-1 .skw-page__half--right .skw-page__content { background-image: url("sea.png"); }
+
+.skw-page-2 .skw-page__half--left .skw-page__content { background-image: url("sea.png"); }
+
+.skw-page-2 .skw-page__half--right .skw-page__content { background-image: url("img/2.jpg"); width: 700px;}
+
+.skw-page-3 .skw-page__half--left .skw-page__content { background-image: url("img/3.jpg"); width: 700px; margin-left:260px;}
+
+.skw-page-3 .skw-page__half--right .skw-page__content { background-image: url("sea.png"); }
+
+.skw-page-4 .skw-page__half--left .skw-page__content { background-image: url("sea.png"); }
+
+.skw-page-4 .skw-page__half--right .skw-page__content { background-image: url("img/4.jpg"); width: 700px;}
+
+.skw-page-5 .skw-page__half--left .skw-page__content { background-image: url("img/5.jpg"); width: 700px; margin-left:260px;}
+
+.skw-page-5 .skw-page__half--right .skw-page__content { background-image: url("sea.png"); }
+
+.skw-page-6 .skw-page__half--left .skw-page__content { background-image: url("sea.png"); }
+.skw-page-6 .skw-page__half--right .skw-page__content { background-image: url("img/7.jpg"); width: 700px;}
+
+.skw-page-7 .skw-page__half--left .skw-page__content { background-image: url("sea.png"); }
+.skw-page-7 .skw-page__half--right .skw-page__content { background-image: url("img/8.jpg"); width: 700px;}
+
+.skw-page-8 .skw-page__half--left .skw-page__content { background-image: url("sea.png"); }
+.skw-page-8 .skw-page__half--right .skw-page__content { background-image: url("img/6.jpg"); width: 700px;}
+</style>
+<script type="text/javascript">
+    if(navigator.userAgent.toLowerCase().indexOf("android") > -1){
+        window.location.href = 'https://play.google.com/store/apps/details?id=com.abhiprae.aaruush17';
+    }
+
+</script>
+</head>
+
+<body>
+
+   <ul>
+    <li><img src="logo.png" style="width:40px; margin-top:12px; margin-left:8px;"></li>
+    <li style="font-family:Xirod-Regular;"><a href="../index.html">AARUUSH'17</a></li>
+  <li><a href="../aboutus.html">About Us</a></li>
+  <li><a href="../highlights.html">Highlights</a></li>
+  <li><a href="../work/work.html" style="background-color:#2c78a2;">Workshops</a></li>
+  <li><a href="../champ/champ.html">Championships</a></li>
+  <li><a href="../spon/spon.html">Sponsors</a></li>
+    <li><a href="../gallery/gallery.html">Gallery</a></li>
+
+  <li style="float:right;"><a href="../contact.php">Contact Us</a></li>
+</ul>
+<div class="skw-pages">
+  <div class="skw-page skw-page-1 active">
+    <div class="skw-page__half skw-page__half--left">
+      <div class="skw-page__skewed">
+        <div class="skw-page__content"></div>
+      </div>
+    </div>
+    <div class="skw-page__half skw-page__half--right">
+      <div class="skw-page__skewed">
+        <div class="skw-page__content">
+          <h1 class="skw-page__heading">Hacktrack</h1><p><b>Ethical Hacking workshop by Sunny Vaghela</b></p><br>
+          <p class="skw-page__description" style="margin-bottom:20px;"><span >The world is involved in a cyber arms race in which professional hackers and cyber criminals are on the front foot. Ethical hacking is performed to identify potential threats on the computer or network. An ethical hacker attempts to hack their way past the system security, finding any weak points in the security that could be exploited by other hackers. Ethical hacker finds ways to improve the system security, in an effort to minimize, if not eliminate any potential hacker attacks.<br><br>
+          <b>By: </b>Sunny Vaghela<br>
+          <b>Date: </b>18<sup>th</sup> - 19<sup>th</sup> September 2017<br>
+          <b>Cost: </b>Rs. 1000<br>
+          <b>Contact: </b>Aneek: +91 98747 78927​⁠​
+          </span></p>
+       <a href="http://thecollegefever.com/events/aaruush17" style="text-decoration: none;"><p style="background-color:transparent; color:white; padding:5px; border: 3px solid white; margin-bottom:0px; text-decoration:none;">Register</p></a>
+<p style="color:white; text-decoration:none; margin-top:50px;"><a class="next" onClick="myFunction()" href="#" style="text-decoration:none;"><span style="background-color:transparent; color:white; padding:5px; border: 3px solid white; text-decoration:none;">Next</span></a> (1/8) </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="skw-page skw-page-2">
+    <div class="skw-page__half skw-page__half--left">
+      <div class="skw-page__skewed">
+        <div class="skw-page__content">
+          <h1 class="skw-page__heading"> Social Media Analytics using Big Data</h1>
+          <p class="skw-page__description" style="margin-bottom:35px;"><span >The workshop is to engage participant to analyse huge amounts of data which is being generated. The analysis is done in the field of Social Media with the help of datasets and basic concepts of Big Data<br><br>
+          <b>By: </b>RoboTech Labs<br>
+          <b>Date: </b>18<sup>th</sup> - 19<sup>th</sup> September 2017<br>
+          <b>Cost: </b>Rs. 1200<br>
+          <b>Contact: </b>Aneek: +91 98747 78927​⁠​
+          </span></p>
+      <a href="http://thecollegefever.com/events/aaruush17" style="text-decoration: none;"><p style="background-color:transparent; color:white; padding:5px; border: 3px solid white; margin-bottom:0px; text-decoration:none;">Register</p></a>
+<p style="color:white; text-decoration:none; margin-top:50px;"><a class="next" onClick="myFunction()" href="#" style="text-decoration:none;"><span style="background-color:transparent; color:white; padding:5px; border: 3px solid white; text-decoration:none;">Next</span></a> (2/8) <a class="previous" onClick="myFunction()" href="#" style="text-decoration:none;"><span style="background-color:transparent; color:white; padding:5px; border: 3px solid white; text-decoration:none;">Previous</span></a></p>
+        </div>
+      </div>
+    </div>
+    <div class="skw-page__half skw-page__half--right">
+      <div class="skw-page__skewed">
+        <div class="skw-page__content"></div>
+      </div>
+    </div>
+  </div>
+  <div class="skw-page skw-page-3">
+    <div class="skw-page__half skw-page__half--left">
+      <div class="skw-page__skewed">
+        <div class="skw-page__content"></div>
+      </div>
+    </div>
+    <div class="skw-page__half skw-page__half--right">
+      <div class="skw-page__skewed">
+        <div class="skw-page__content">
+          <h2 class="skw-page__heading" id="1">QUADCOPTER</h2>
+          <p class="skw-page__description" style="margin-bottom:35px;"><span >The workshop enables a participant to learn the basics and design the prototype in a group of four inorder to fly the same with the help of RC Controller.<br><br>
+          <b>By: </b> RoboKart.com<br>
+          <b>Team: </b>Team of 4<br>
+          <b>Date: </b>16<sup>th</sup>- 17<sup>th</sup> September 2017<br>
+          <b>Cost: </b>Rs. 5600 for 4<br>
+                    <b>Contact: </b>Aneek: +91 98747 78927​⁠​
+
+          </span></p>
+        <a href="http://thecollegefever.com/events/aaruush17" style="text-decoration: none;"><p style="background-color:transparent; color:white; padding:5px; border: 3px solid white; margin-bottom:0px; text-decoration:none;">Register</p></a>
+<p style="color:white; text-decoration:none; margin-top:50px;"><a class="next" onClick="myFunction()" href="#" style="text-decoration:none;"><span style="background-color:transparent; color:white; padding:5px; border: 3px solid white; text-decoration:none;">Next</span></a> (3/8) <a class="previous" onClick="myFunction()" href="#" style="text-decoration:none;"><span style="background-color:transparent; color:white; padding:5px; border: 3px solid white; text-decoration:none;">Previous</span></a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="skw-page skw-page-4">
+    <div class="skw-page__half skw-page__half--left">
+      <div class="skw-page__skewed">
+        <div class="skw-page__content">
+          <h2 class="skw-page__heading">BIKE OVERHAULING</h2>
+         <p class="skw-page__description" style="margin-bottom:35px;"><span>This workshop is to impart industrial workflow to students and to show how automobile parts  function, how the bike is conceptualised,designed and  manufactured.
+
+         <br><br><b>By: </b>Prigma EduTech Solutions<br>
+          <b>Date: </b>16<sup>th</sup>- 17<sup>th</sup> September 2017<br>
+          <b>Cost: </b>Rs. 1200<br>
+          <b>Contact: </b>Aneek: +91 98747 78927​⁠​
+          </span></p>
+         <a href="http://thecollegefever.com/events/aaruush17" style="text-decoration: none;"><p style="background-color:transparent; color:white; padding:5px; border: 3px solid white; margin-bottom:0px; text-decoration:none;">Register</p></a>
+<p style="color:white; text-decoration:none; margin-top:50px;"><a class="next" onClick="myFunction()" href="#" style="text-decoration:none;"><span style="background-color:transparent; color:white; padding:5px; border: 3px solid white; text-decoration:none;">Next</span></a> (4/8) <a class="previous" onClick="myFunction()" href="#" style="text-decoration:none;"><span style="background-color:transparent; color:white; padding:5px; border: 3px solid white; text-decoration:none;">Previous</span></a></p>        </div>
+      </div>
+    </div>
+    <div class="skw-page__half skw-page__half--right">
+      <div class="skw-page__skewed">
+        <div class="skw-page__content"></div>
+      </div>
+    </div>
+  </div>
+  <div class="skw-page skw-page-5">
+    <div class="skw-page__half skw-page__half--left">
+      <div class="skw-page__skewed">
+        <div class="skw-page__content"></div>
+      </div>
+    </div>
+    <div class="skw-page__half skw-page__half--right">
+      <div class="skw-page__skewed">
+        <div class="skw-page__content">
+          <h2 class="skw-page__heading">SWARM ROBOTICS</h2>
+          <p class="skw-page__description" style="margin-bottom:35px;"><span>This workshop is to teach the participants to design multi control robots in order to avoid obstacles. A group of 4 people come together to understand the basics,learn,design the prototypes and finally controlling the robots using problem statements.
+         <br><br> <b>By: </b>HT Labs<br>
+          <b>Team: </b>Team of 4<br>
+          <b>Date: </b>13<sup>th</sup>- 14<sup>th</sup> September 2017<br>
+          <b>Cost: </b>Rs. 5600 for 4<br>
+          <b>Contact: </b>Aneek: +91 98747 78927​⁠​
+          </span></p>
+         <a href="http://thecollegefever.com/events/aaruush17" style="text-decoration: none;"><p style="background-color:transparent; color:white; padding:5px; border: 3px solid white; margin-bottom:0px; text-decoration:none;">Register</p></a>
+<p style="color:white; text-decoration:none; margin-top:50px;"><a class="next" onClick="myFunction()" href="#" style="text-decoration:none;"><span style="background-color:transparent; color:white; padding:5px; border: 3px solid white; text-decoration:none;">Next</span></a> (5/8) <a class="previous" onClick="myFunction()" href="#" style="text-decoration:none;"><span style="background-color:transparent; color:white; padding:5px; border: 3px solid white; text-decoration:none;">Previous</span></a></p>        </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="skw-page skw-page-6">
+    <div class="skw-page__half skw-page__half--left">
+      <div class="skw-page__skewed">
+        <div class="skw-page__content">
+          <h1 class="skw-page__heading">COGNITIVE COMPUTING USING WATSON</h1>
+          <p class="skw-page__description" style="margin-bottom:35px;">IBM brings to you a workshop on their Watson platform. With Watson, you have the AI platform for business. Uncover insights, engage in new ways, make decisions with more confidence and do your best work with Watson, today. The workshop will give the participants an exposure to the platform post which they get to attend the Aaruush Hackathon to create the prototypes
+     <br><br>
+          <b>By: </b>IBM<br>
+          <b>Date: </b>16<sup>th</sup> September 2017<br>
+          <b>Cost: </b>Rs. 1000<br>
+          <b>Contact: </b>Aneek: +91 98747 78927​⁠​
+          </span></p>
+          <a href="http://thecollegefever.com/events/aaruush17" style="text-decoration: none;"><p style="background-color:transparent; color:white; padding:5px; border: 3px solid white; margin-bottom:0px; text-decoration:none;">Register</p></a>
+<p style="color:white; text-decoration:none; margin-top:50px;">
+  <a class="next" onClick="myFunction()" href="#" style="text-decoration:none;"><span style="background-color:transparent; color:white; padding:5px; border: 3px solid white; text-decoration:none;">Next</span></a> (6/8) <a class="previous" onClick="myFunction()" href="#" style="text-decoration:none;"><span style="background-color:transparent; color:white; padding:5px; border: 3px solid white; text-decoration:none;">Previous</span></a></p>           </div>
+      </div>
+    </div>
+    <div class="skw-page__half skw-page__half--right">
+      <div class="skw-page__skewed">
+        <div class="skw-page__content"></div>
+      </div>
+    </div>
+  </div>
+   <div class="skw-page skw-page-7">
+    <div class="skw-page__half skw-page__half--left">
+      <div class="skw-page__skewed">
+        <div class="skw-page__content">
+          <h1 class="skw-page__heading">WEBENCH POWER TOOL BY TEXAS INSTRUMENTS</h1>
+          <p class="skw-page__description" style="margin-bottom:35px;">Ever wondered how your scientific calculator worked? Or how the motherboards of various electronic devices are designed? If you're interests lie about the way an electronic device gets it's power or the way it processes functions, then this workshop is the perfect fit for you. Texas Instruments is a renowned company for making electronic devices, surely what you learn from them will be beyond subject knowledge.
+
+     <br><br>
+          <b>By: </b>Texas Instruments<br>
+          <b>Date: </b>18<sup>th</sup> September 2017<br>
+          <b>Cost: </b>Rs. 1000<br>
+          <b>Contact: </b>Aneek: +91 98747 78927​⁠​
+          </span></p>
+          <a href="http://thecollegefever.com/events/aaruush17" style="text-decoration: none;"><p style="background-color:transparent; color:white; padding:5px; border: 3px solid white; margin-bottom:0px; text-decoration:none;">Register</p></a>
+<p style="color:white; text-decoration:none; margin-top:50px;">
+  <!--<a class="next" onClick="myFunction()" href="#" style="text-decoration:none;"><span style="background-color:transparent; color:white; padding:5px; border: 3px solid white; text-decoration:none;">Next</span></a>--> (7/8) <a class="previous" onClick="myFunction()" href="#" style="text-decoration:none;"><span style="background-color:transparent; color:white; padding:5px; border: 3px solid white; text-decoration:none;">Previous</span></a></p>           </div>
+      </div>
+    </div>
+    <div class="skw-page__half skw-page__half--right">
+      <div class="skw-page__skewed">
+        <div class="skw-page__content"></div>
+      </div>
+    </div>
+  </div>
+  <div class="skw-page skw-page-8">
+   <div class="skw-page__half skw-page__half--left">
+     <div class="skw-page__skewed">
+       <div class="skw-page__content">
+         <h1 class="skw-page__heading">SCRIBBLED STORIES</h1>
+         <p class="skw-page__description" style="margin-bottom:35px;">Every word weaves stories memorable. Every word, sentence and prose can create magic and fill you with emotions never felt before! India's most loved social storytelling platform, brings you a fun, interactive writing workshop with a sneak peak on how to get your writings published. Catch the infamous Instagram and Facebook page The Scribbled Stories on the 19th of August 2017.
+    <br><br>
+         <b>By: </b>The Scribbled Stories<br>
+         <b>Date: </b>19<sup>th</sup> August 2017<br>
+         <b>Cost: </b>Rs. 250<br>
+         <b>Contact: </b>Aneek: +91 98747 78927​⁠​
+         </span></p>
+
+  <p style="color:white; text-decoration:none; margin-top:50px;">
+  <a class="next" onClick="myFunction()" href="#" style="text-decoration:none;"><span style="background-color:transparent; color:white; padding:5px; border: 3px solid white; text-decoration:none;">Next</span></a> (8/8) <a class="previous" onClick="myFunction()" href="#" style="text-decoration:none;"><span style="background-color:transparent; color:white; padding:5px; border: 3px solid white; text-decoration:none;">Previous</span></a></p>           </div>
+     </div>
+   </div>
+   <div class="skw-page__half skw-page__half--right">
+     <div class="skw-page__skewed">
+       <div class="skw-page__content"></div>
+     </div>
+   </div>
+  </div>
+</div>
+<footer id="footer">
+	<div class="container">
+		<div class = "col-lg-1">
+        <a href="../credits.html"><img src = "../ac1.png" width="250px" align="right"></a>
+		</div>
+</footer>
+<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+
+<script>
+$(document).ready(function() {
+
+  var curPage = 1;
+  var numOfPages = $(".skw-page").length;
+  var animTime = 1000;
+  var scrolling = false;
+  var pgPrefix = ".skw-page-";
+
+  function pagination() {
+    scrolling = true;
+
+    $(pgPrefix + curPage).removeClass("inactive").addClass("active");
+    $(pgPrefix + (curPage - 1)).addClass("inactive");
+    $(pgPrefix + (curPage + 1)).removeClass("active");
+
+    setTimeout(function() {
+      scrolling = false;
+    }, animTime);
+  };
+
+  function navigateUp() {
+    if (curPage === 1) return;
+    curPage--;
+    pagination();
+  };
+
+  function navigateDown() {
+    if (curPage === numOfPages) return;
+    curPage++;
+    pagination();
+  };
+
+  $(document).on("mousewheel DOMMouseScroll", function(e) {
+    if (scrolling) return;
+    if (e.originalEvent.wheelDelta > 0 || e.originalEvent.detail < 0) {
+      navigateUp();
+    } else {
+      navigateDown();
+    }
+  });
+
+  $(document).on("keydown", function(e) {
+    if (scrolling) return;
+    if (e.which === 38) {
+      navigateUp();
+    } else if (e.which === 40) {
+      navigateDown();
+    }
+  });
+var clickable = $('.next')
+  $(clickable).on("click", function(e) {
+    if (scrolling) return;
+
+      navigateDown();
+  });
+  var clickable = $('.previous')
+  $(clickable).on("click", function(e) {
+    if (scrolling) return;
+
+      navigateUp();
+  });
+});
+</script>
+
+</body>
+</html>

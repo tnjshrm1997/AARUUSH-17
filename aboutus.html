@@ -1,0 +1,205 @@
+<!--About Us*/-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>About Us | Aaruush'17</title>
+<link rel="shortcut icon" type="image/x-icon" href="img/aaruush_title_logo.ico" />
+<link rel = "stylesheet" type = "text/css" href = "css/aboutus.css">
+<link rel = "stylesheet" type = "text/css" href = "css/montserrat.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="abt.js"></script>
+<link href="css/preloader.css" rel="stylesheet" type="text/css">
+ <link rel="stylesheet" href="css/hover.css">
+<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+<script src="js/jquery.preloader.min.js"></script>
+<script>
+function show(shown, hidden, hidden1, hidden2, hidden3) {
+  document.getElementById(shown).style.display='block';
+  document.getElementById(hidden).style.display='none';
+  document.getElementById(hidden1).style.display='none';
+  document.getElementById(hidden2).style.display='none';
+  document.getElementById(hidden3).style.display='none';
+  return false;
+}
+</script>
+
+<style type="text/css">
+body{
+  background-image: url('sea.png');
+    background-repeat: no-repeat;
+
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    font-family: montserrat;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #2c78a2;
+}
+li.selected {
+    background-color: #2c78a2;
+}
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+</style>
+
+</head>
+<body>
+  <div id="preloader">
+    <div id="preloader-inner"></div>
+</div>
+<ul>
+    <li><img src="logo.png" style="width:40px; margin-top:12px; margin-left:8px;"></li>
+    <li style="font-family:Xirod-Regular;"><a href="index.html">AARUUSH'17</a></li>
+  <li><a style="background-color:#2c78a2;" href="#">About Us</a></li>
+  <li><a href="highlights.html">Highlights</a></li>
+  <li><a href="work/work.html">Workshops</a></li>
+  <li><a href="champ/champ.html">Championships</a></li>
+  <li><a href="spon/spon.html">Sponsors</a></li>
+<li><a href="gallery/gallery.html">Gallery</a></li>
+<li class="dropdown">
+    <a href="javascript:void(0)">More <i class="down" style=" border: solid white; border-width: 0 3px 3px 0; display: inline-block; padding: 3px; margin-bottom:2px;"></i></a>
+    <div class="dropdown-content">
+      <a href="swastika.html">Swastika</a>
+      <a href="tsummit/index.html" target="_blank">T-Summit</a>
+      <a href="events.html">Events</a>
+      <a href="https://nishanth24.typeform.com/to/FaApR7">Ambassador</a>
+      <a href="initiatives/initiatives.html">Initiatives</a>
+      <a href="team/team.html">Team</a>
+      <a href="#">Credits</a>
+    </div>
+  </li>
+  <li style="float:right;"><a href="contact.php">Contact Us</a></li>
+</ul>
+
+<div class = "outerbox">
+
+</div>
+
+<div id ="left_menu">
+<ul id = "menu">
+  <li><a style="padding-right:500px;" class = "" href="#" onclick="return show('Page1','Page2', 'Page5','Page3', 'Page4');">SRM&nbsp;University</a></li>
+  <li><a style="display:block; padding-right:500px;" class = "" href="#" onclick="return show('Page2','Page5', 'Page1','Page3', 'Page4');">Legacy</a></li>
+  <li><a style="display:block; padding-right:500px;" class = "" href="#" onclick="return show('Page3','Page2', 'Page1','Page5', 'Page4');">Tagline</a></li>
+  <li><a style="display:block; padding-right:500px;" class = "" href="#" onclick="return show('Page4','Page2', 'Page1','Page3', 'Page5');">Theme</a></li>
+  <li><a style="display:block; padding-right:500px;" class = "" href="#" onclick="return show('Page5','Page2', 'Page1','Page3', 'Page4');">Patrons</a><li>
+ </ul>
+</div>
+
+<div id="Page1" class="content" style="overflow-y: hidden;">
+  <h1>SRM University</h1>
+  <p>Started in the year 1985, and currently ranked as one of the best private universities in the country, S.R.M. University provides students with a wide range of undergraduate,postgraduate and doctoral programs, in the fields of Engineering, Medical, Health Sciences and Sciences and Humanities. The sprawling campus, spread out over an area of 600 acres, includes state-of-the-art architecture and facilities, such as the world class library, smart class rooms, air conditioned lecture halls, Wi-Fi Campus and many more. SRM also takes pride in its 4000 capacity T.P. Ganesan auditorium, Asia's second largest auditorium. By providing the students with premium hostel facilities and an endless list of conveniences in and around the campus, such as canteens, gymnasiums, prayer halls, book stores, departmental stores, laptop repair centers and ATMs, the college makes sure to cater to all the needs of students and teachers alike. In collaboration with world renowned universities and institutions such as MIT, Carnegie Mellon, UC Davis and Warwick, the university always aims to improve its curriculum, keeping them at par with the global standards. The University has accreditations from the national agencies like the UGC, AICTE and boasts an 'a' grade from the NAAC. Some of the courses additionally have an ABET accreditation.</p><p>SRM follows an ideology wherein they encourage the students to employ research oriented learning methods while laying a strong emphasis on undertaking projects, the proof of that being the presence of a number of reputed student led projects such as the SRMUAV, SRMAUV, SRMSAT, Camber Racing, 4ze Racing just to name a few. The university stays true to its motto of Learn, Leap and Lead, as it strives to be the forerunner in its field, providing undiluted support in the form of well-versed faculty, state of the art laboratories, global exposure and a research conducive environment.</p>
+</div>
+
+<div id="Page2" class="content" style="display:none;">
+  <h1>Legacy</h1>
+  <p>The word 'Aaruush' translates to 'the first rays of the sun'. And that's what it was, at the time of its inception back in 2007, the rays of the sun, which would eventually enlighten the lives of many people for years to come. Started by four visionary final year students of the college, Aaruush was initially intended to be a technical fest; consisting of 26 events and over 3000 participants, but it has exceeded the expectations of all. And so successful was the idea, that the inauguration was presided over by the former president of India, Dr. A.P.J. Abdul Kalam.<br><br>
+
+"Seek and you shall find, when you feel everything is lost, innovation will guide you through" his words still echo in the minds of many and has taken Aaruush to the position where it stands now. After its noteworthy beginning in 2007, there was no looking back, it only kept getting better each year. The following year saw Aaruush go national, with over 4500 participants from over 24 states. It was in 2009 that Aaruush evolved from merely a technical fest, to a Techno-Management extravaganza, as we included two new domains - Fundaz and Online. The reputation of Aaruush kept growing, having tie ups with organizations like European Southern Observatory, IEEE, European Space Agency, and had DRDO unveil its latest technology in the form of the 'Arjun' tank. Reputed NGO's like PETA, HOPE, CRY associated with Aaruush, reflect its social responsibility. And it only got better, Aaruush 2012 and 2013 hosted several stalwarts of repute such as Dr. Richard Matthew Stallman, Mr. Rajan Anandan, Dr. Tessy Thomas, Mr. Aakash Sinha, all sharing their knowledge with the participants. Aaruush 2014 saw us welcome eminent personalities such as Dr. Krishnaswamy Kasturirangan, Anuraag Batra, Dr. Eshwar Natarajan and also welcomed Mr. Sam Pitroda, all the way from America, with the help of state of the art video conferencing technology.<br><br>
+
+Aaruush that year, witnessed an unprecedented footfall, crossing 37000 and set another record, being the platform where the new Arjun Mk II tank was first unraveled. And for those who thought a Techno-Management fest was only about education, Aaruushproved that it was way more, by conducting light and sound shows, Pro shows and the famous Aaruush Nites that attracted the masses by the thousands. The various expos that took place, including the coins expo, the newspaper expo, the Indian Army Weapons Expo and the Auto Expo were prime attractions as the 8th edition of the fest came to a grand end.</p>
+</div>
+
+<div id="Page3" class="content" style="display:none; overflow-y: hidden;">
+     <h1>Tagline</h1>
+<p>Intelligence has played an important role in all achievements of the human race. It has been a foundation for new inventions and creations since the beginning of time. From the discovery of fire to the invention of various medicines, from the writing of letters to the development of electronic mails and phone calls, there is much more to come. The designs of revolutionary movements and technologies would be impossible to achieve without the simplicity of creative design, the correction of faults, feasibility and much more. A good design cannot be defined. It is measured using multiple perspectives like innovation, functionality, usefulness, authenticity and user-orientation.<br><br>
+Aaruush believes that the designs of today take inspiration from the pioneers of yesterday. Aaruush believes that the role of intelligence within a modern society will continue to push boundaries as technology advances with time. Taking inspiration from the bright night owls and the overenthusiastic creative heads, Aaruush harbours the brilliance in every mind. Aaruush ’17 gives a platform to pioneer the change into this new world.<br><br>
+Welcoming brilliant ideas, and mind-boggling designs, Aaruush ’17 aims to redefine and elevate intelligence.
+Aaruush ’17 proudly presents its tagline,<br><br> <span style="font-size:28px;"><b>“Empowering Designs | Exalting Intelligence”</b></span></p>
+</div>
+
+<div id="Page4" class="content" style="display:none; overflow-y: hidden;">
+
+   <h1>Theme</h1>
+  <p>Beautiful. Exciting. Ravishing. Enchanting.<br><br>
+
+These are just few of the words we use to describe things that are Infinite. AARUUSH uses these ideas to create a platform showcasing a plethora of talent. We find infinity in the number of stars in the night sky, the number of raindrops in an ocean, the memories hidden behind the lens of an eye and the number of ideas that emerge out of minds alike.<br><br>
+
+Aaruush towards Infinity leads these minds towards the path of inspiration, discovery, growth and achievement. It brings out the talents of more than 40,000 of its participants with utmost enthusiasm and gratification. With mind-boggling events and eye-catching highlights, Aaruush ’17 steps into its 11th year with the spark of the wondrous eternity<br><br><span style="font-size:28px;"><b>"Aaruush Towards Infinity"</b></span></p>
+</div>
+
+<div id="Page5" class="content" style="display:none; overflow-x:auto; overflow-y: auto;">
+   <h1>Patrons</h1>
+   <table>
+            <tr>
+              <td style="padding-right:20px;"><img src="images/et.jpg" style="width:200px; padding-right:200px; padding-left:30px;" class="pat" id="pa1"></td>
+              <td style=""><img src="images/rathinam.jpg" style="width:200px;" class="pat" id="pa2"></td>
+            </tr>
+            <tr>
+              <td style="padding-left:30px; padding-bottom:40px;">Dr. C. Muthamizhchelvan<br><b>Director - E & T</b></td>
+              <td style="padding-bottom:40px;">Prof. Dr. A. Rathinam<br><b>Convenor</b></td>
+            </tr>
+            <tr>
+              <td style="padding-right:20px;"><img src="images/eo.jpg" style="width:200px; padding-right:200px; padding-left:30px;" class="pat" id="pa3"></td>
+              <td style=""><img src="images/fa.jpg" style="width:200px;" class="pat" id="pa4"></td>
+            </tr>
+            <tr>
+              <td style="padding-left:30px;">Mr. V. Thirumurugan<br><b>Associate Director</b></td>
+              <td style="">Prof. V .M. Ponniah<br><b>Finance Advisor</b></td>
+            </tr>
+          </table>
+
+</div>
+<br>
+<footer id="footer">
+	<div class="container">
+		<div class="bringFront">
+		</div>
+		<div class = "col-lg-1">
+				  <a href="credits.html"><img src = "ac1.png" width="250px"  align="right"></a>
+		</div>
+</footer>
+<script>
+    $(window).preloader({
+        delay: 1500
+    });
+</script>
+
+</body>
+</html>

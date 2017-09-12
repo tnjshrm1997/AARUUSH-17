@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+
+body {
+  font-family: 'Source Code Pro', monospace;
+  background-color: #111;
+}
+
+#canvas {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  cursor: pointer;
+}
+
+.top {
+  top: 0px;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  color: #fff;
+  pointer-events: none;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.controls {
+  position: absolute;
+}
+
+p {
+  background: #222;
+  color: #fff;
+  height: 30px;
+  padding: 0 6px;
+  line-height: 32px;
+  margin: 2px;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-radius: 4px;
+}
+
+button {
+  width: 100%;
+}
+
+label, checkbox {
+  margin-right: 6px;
+}
+
+@media (max-width: 600px) {
+  .controls {
+    display: none;
+  }
+}
